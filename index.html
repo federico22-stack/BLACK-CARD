@@ -10,37 +10,32 @@
 
 <body>
 
-<div class="screen">
+<div class="screen" id="screen1">
 
-    <!-- HEADER -->
-    <div class="top">
-        <div class="brand">BLACK CARD</div>
-        <div class="subtitle">ACCESO EXCLUSIVO</div>
+    <div class="logo">LA LLAVE.</div>
+
+    <div class="title">ACCESS GRANTED</div>
+
+    <div class="subtitle">
+        You've been selected.<br>
+        Electronic Night Experience
     </div>
 
-    <!-- CENTER -->
-    <div class="center">
+    <button id="scanBtn" class="btn">
+        UNLOCK MY BENEFIT
+    </button>
 
-        <div class="status-box" id="status">
-            ESCANEÁ TU QR
-        </div>
+</div>
 
-        <div class="code" id="code">
-            ---
-        </div>
+<div class="screen hidden" id="screen2">
 
-    </div>
+    <div class="card">
 
-    <!-- FOOTER -->
-    <div class="bottom">
+        <div class="status" id="status">CARGANDO...</div>
 
-        <div class="benefit">
-            FAST PASS ACTIVADO
-        </div>
+        <div class="code" id="code">---</div>
 
-        <button class="btn" id="scanBtn">
-            INICIAR ESCANEO
-        </button>
+        <div class="benefit">FAST PASS ACTIVADO</div>
 
     </div>
 
