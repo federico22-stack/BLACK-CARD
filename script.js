@@ -40,8 +40,32 @@ async function checkCode() {
 
 checkCode();
 
-scanBtn.addEventListener("click", function () {
+scanBtn.addEventListener("click", async function () {
 
-    alert("Botón conectado correctamente");
+    // cambiar pantalla
+    screen1.classList.add("hidden");
+    screen2.classList.remove("hidden");
 
+    statusEl.innerText = "CHECKING...";
+
+    try {
+        const res = await fetch(API_URL + "?code=" + code);
+        const data = await res.json();
+
+        if (data.status === "VALID") {
+            statusEl.innerHTML = "🟢 VALID";
+        }
+
+        else if (data.status === "REDEEMED") {
+            statusEl.innerHTML = "🔴 REDEEMED";
+        }
+
+        else {
+            statusEl.innerHTML = "❌ INVALID";
+        }
+
+    } catch (err) {
+        console.log(err);
+        statusEl.innerHTML = "ERROR API";
+    }
 });
