@@ -42,7 +42,6 @@ checkCode();
 
 scanBtn.addEventListener("click", async function () {
 
-    // cambiar pantalla
     screen1.classList.add("hidden");
     screen2.classList.remove("hidden");
 
